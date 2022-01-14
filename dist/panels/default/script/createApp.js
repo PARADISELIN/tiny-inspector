@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default() {
   const app = (0, _vue.createApp)(_App.default);
 
-  app.config.compilerOptions.isCustomElement = tag => tag.search('ui-') > -1;
+  app.config.compilerOptions.isCustomElement = tag => tag.startsWith('ui-');
 
   return app;
 }

@@ -46,7 +46,7 @@ export default function usePositionProperty() {
       position.z = isAllZPositionEqual ? standardNodeInfo.z : DASH_SYMBOL
     }
 
-    // hack: when the attribute is a string, the data mapping does not work
+    // hack: when value is string, 'reactive' doesn't work
     if (xInputRef.value) xInputRef.value.$input.value = position.x
     if (yInputRef.value) yInputRef.value.$input.value = position.y
     if (zInputRef.value) zInputRef.value.$input.value = position.z

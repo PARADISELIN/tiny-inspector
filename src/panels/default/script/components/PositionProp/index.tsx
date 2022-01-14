@@ -3,7 +3,7 @@ import { defineComponent, watch, onMounted, onUnmounted, PropType } from 'vue'
 import usePositionProperty from './usePositionProperty'
 
 const PositionProp = defineComponent({
-  name: 'position-item',
+  name: 'PositionProp',
   props: {
     uuids: {
       type: Array as PropType<string[]>,

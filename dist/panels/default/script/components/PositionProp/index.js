@@ -12,7 +12,7 @@ var _usePositionProperty = _interopRequireDefault(require("./usePositionProperty
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const PositionProp = (0, _vue.defineComponent)({
-  name: 'position-item',
+  name: 'PositionProp',
   props: {
     uuids: {
       type: Array,
@@ -73,7 +73,7 @@ const PositionProp = (0, _vue.defineComponent)({
     }, [(0, _vue.createVNode)("span", null, [(0, _vue.createTextVNode)("x: ")]), (0, _vue.createVNode)((0, _vue.resolveComponent)("ui-num-input"), {
       "class": "pos__input",
       "ref": xInputRef,
-      "step": "1",
+      "step": "0.1",
       "value": position.x,
       "onchange": $event => onPositionChange('x', $event)
     }, null)]), (0, _vue.createVNode)("li", {
@@ -81,7 +81,7 @@ const PositionProp = (0, _vue.defineComponent)({
     }, [(0, _vue.createVNode)("span", null, [(0, _vue.createTextVNode)("y: ")]), (0, _vue.createVNode)((0, _vue.resolveComponent)("ui-num-input"), {
       "className": "pos__input",
       "ref": yInputRef,
-      "step": "1",
+      "step": "0.1",
       "value": position.y,
       "onchange": $event => onPositionChange('y', $event)
     }, null)]), (0, _vue.createVNode)("li", {
@@ -89,7 +89,7 @@ const PositionProp = (0, _vue.defineComponent)({
     }, [(0, _vue.createVNode)("span", null, [(0, _vue.createTextVNode)("z: ")]), (0, _vue.createVNode)((0, _vue.resolveComponent)("ui-num-input"), {
       "className": "pos__input",
       "ref": zInputRef,
-      "step": "1",
+      "step": "0.1",
       "value": position.z,
       "onchange": $event => onPositionChange('z', $event)
     }, null)])])]);

@@ -51,7 +51,7 @@ function usePositionProperty() {
       position.x = isAllXPositionEqual ? standardNodeInfo.x : _constants.DASH_SYMBOL;
       position.y = isAllYPositionEqual ? standardNodeInfo.y : _constants.DASH_SYMBOL;
       position.z = isAllZPositionEqual ? standardNodeInfo.z : _constants.DASH_SYMBOL;
-    } // hack: when the attribute is a string, the data mapping does not work
+    } // hack: when value is string, 'reactive' doesn't work
 
 
     if (xInputRef.value) xInputRef.value.$input.value = position.x;
