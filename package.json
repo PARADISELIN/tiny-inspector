@@ -36,7 +36,7 @@
   "contributions": {
     "menu": [
       {
-        "path": "tiny-inspector",
+        "path": "i18n:menu.panel/tiny-inspector",
         "label": "i18n:tiny-inspector.open_panel",
         "message": "open-panel"
       }
