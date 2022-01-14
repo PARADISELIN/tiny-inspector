@@ -1,4 +1,4 @@
-export function isAllElementEqualArray(data: number[]): boolean {
+export function isAllElementEqualArray(data: Array<string | number>): boolean {
   if (data.length === 0) return false
   if (data.length === 1) return true
 

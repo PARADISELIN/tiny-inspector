@@ -29,24 +29,10 @@ module.exports = Editor.Panel.define({
   template: (0, _fsExtra.readFileSync)((0, _path.join)(__dirname, '../../../../static/template/default/index.html'), 'utf-8'),
   style: (0, _fsExtra.readFileSync)((0, _path.join)(__dirname, '../../../../static/style/default/index.css'), 'utf-8'),
   $: {
-    app: '#app',
-    text: '#text'
-  },
-  methods: {
-    hello() {
-      if (this.$.text) {
-        this.$.text.innerHTML = 'hello';
-        console.log('[cocos-panel-html.default]: hello');
-      }
-    }
-
+    app: '#app'
   },
 
   ready() {
-    if (this.$.text) {
-      this.$.text.innerHTML = 'Hello Cocos.';
-    }
-
     if (this.$.app) {
       const app = (0, _createApp.default)();
       app.mount(this.$.app);
@@ -62,6 +48,7 @@ module.exports = Editor.Panel.define({
     if (app) {
       app.unmount();
     }
-  }
+  },
 
+  methods: {}
 });

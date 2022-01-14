@@ -26,20 +26,8 @@ module.exports = Editor.Panel.define({
   style: readFileSync(join(__dirname, '../../../../static/style/default/index.css'), 'utf-8'),
   $: {
     app: '#app',
-    text: '#text'
-  },
-  methods: {
-    hello() {
-      if (this.$.text) {
-        this.$.text.innerHTML = 'hello'
-        console.log('[cocos-panel-html.default]: hello')
-      }
-    }
   },
   ready() {
-    if (this.$.text) {
-      this.$.text.innerHTML = 'Hello Cocos.'
-    }
     if (this.$.app) {
       const app = createApp()
       app.mount(this.$.app)
@@ -52,5 +40,6 @@ module.exports = Editor.Panel.define({
     if (app) {
       app.unmount()
     }
-  }
+  },
+  methods: {}
 })
