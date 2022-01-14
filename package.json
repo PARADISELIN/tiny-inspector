@@ -47,6 +47,9 @@
           "openPanel"
         ]
       }
+    },
+    "scene": {
+      "script": "dist/scene/index.js"
     }
   },
   "author": "Cocos Creator",
