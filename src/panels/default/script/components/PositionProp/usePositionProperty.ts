@@ -5,11 +5,11 @@ import { DASH_SYMBOL } from '../../constants'
 
 import packageJSON from '../../../../../../package.json'
 
-type Dimension = 'x' | 'y' | 'z'
-type DimensionValue = number | string
-type InputElement = { $input: { value: number | string } }
-type Position = Record<Dimension, DimensionValue>
-type NodeInfo = { uuid: string } & Position
+export type Dimension = 'x' | 'y' | 'z'
+export type DimensionValue = number | string
+export type InputElement = { $input: { value: number | string } }
+export type Position = Record<Dimension, DimensionValue>
+export type NodeInfo = { uuid: string } & Position
 
 function isAllNodesPositionEqual(nodesInfo: NodeInfo[], dimension: Dimension): boolean {
   const allNodesPosition = nodesInfo.map(item => item[dimension])
