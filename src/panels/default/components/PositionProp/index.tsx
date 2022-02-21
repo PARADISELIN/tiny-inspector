@@ -2,6 +2,8 @@ import { defineComponent, watch, onMounted, onUnmounted, PropType } from 'vue'
 
 import usePositionProperty from './usePositionProperty'
 
+// import './style.scss'
+
 const PositionProp = defineComponent({
   name: 'PositionProp',
   props: {

@@ -1,8 +1,7 @@
-import { readFileSync } from 'fs-extra'
-import { join } from 'path'
 import { App } from 'vue'
 
 import createApp from './createApp'
+import { globalStyle } from './style'
 
 const weakMap = new WeakMap<any, App>()
 /**
@@ -19,13 +18,10 @@ module.exports = Editor.Panel.define({
       console.log('hide')
     }
   },
-  template: readFileSync(
-    join(__dirname, '../../../../static/template/default/index.html'),
-    'utf-8'
-  ),
-  style: readFileSync(join(__dirname, '../../../../static/style/default/index.css'), 'utf-8'),
+  template: '<div id="app"></div>',
+  style: globalStyle,
   $: {
-    app: '#app',
+    app: '#app'
   },
   ready() {
     if (this.$.app) {

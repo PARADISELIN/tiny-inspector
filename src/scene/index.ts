@@ -1,4 +1,4 @@
-import type { Position } from '../panels/default/script/components/PositionProp/usePositionProperty'
+import type { Position } from '../panels/default/components/PositionProp/usePositionProperty'
 
 module.paths.push(require('path').join(Editor.App.path, 'node_modules'))
 

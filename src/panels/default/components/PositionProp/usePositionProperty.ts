@@ -1,9 +1,9 @@
 import { reactive, ref } from 'vue'
 
-import { isAllElementEqualArray } from '../../../../../utils'
+import { isAllElementEqualArray } from '../../../../utils'
 import { DASH_SYMBOL } from '../../constants'
 
-import packageJSON from '../../../../../../package.json'
+import packageJSON from '../../../../../package.json'
 
 export type Dimension = 'x' | 'y' | 'z'
 export type DimensionValue = number | string
