@@ -28,7 +28,16 @@ const generateBuildInput = () => {
 async function buildPanels() {
   try {
     await build({
-      plugins: [vue(), vueJsx()],
+      plugins: [
+        vue({
+          template: {
+            compilerOptions: {
+              isCustomElement: tag => tag.startsWith('ui-')
+            }
+          }
+        }),
+        vueJsx()
+      ],
       build: {
         rollupOptions: {
           input: generateBuildInput(),
@@ -45,7 +54,7 @@ async function buildPanels() {
 
     console.log('build panels success.')
   } catch (e) {
-    console.log('build panels failed.')
+    console.error('build panels failed.')
     process.exit(1)
   }
 }

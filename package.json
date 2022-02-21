@@ -73,8 +73,7 @@
   "author": "Cocos Creator",
   "editor": ">=3.4.0",
   "scripts": {
-    "build:panels:dev": "cross-env NODE_ENV=development node scripts/panels.js",
-    "build:main:dev": "cross-env NODE_ENV=development node scripts/main.js",
-    "build:scene:dev": "cross-env NODE_ENV=development babel src/scene/index.ts --out-file dist/scene/index.js"
+    "panels:build": "cross-env NODE_ENV=production node scripts/panels.js",
+    "common:build": "cross-env NODE_ENV=production node scripts/common.js"
   }
 }

@@ -1,7 +1,9 @@
 import { App } from 'vue'
 
 import createApp from './createApp'
-import { globalStyle } from './style'
+
+// @ts-ignore
+import style from './style.scss?inline'
 
 const weakMap = new WeakMap<any, App>()
 /**
@@ -19,7 +21,7 @@ module.exports = Editor.Panel.define({
     }
   },
   template: '<div id="app"></div>',
-  style: globalStyle,
+  style: style,
   $: {
     app: '#app'
   },
