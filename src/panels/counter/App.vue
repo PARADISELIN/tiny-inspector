@@ -4,6 +4,13 @@
     <div class="counter__buttons">
       <button @click="increase()">increase</button>
       <button @click="decrease()">decrease</button>
+      <ui-code language="typescript">
+        export const methods = {};
+
+        export function data() {
+        return {};
+        }
+      </ui-code>
     </div>
   </div>
 </template>

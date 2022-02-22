@@ -36,7 +36,9 @@ async function buildPanels() {
             }
           }
         }),
-        vueJsx()
+        vueJsx({
+          isCustomElement: tag => tag.startsWith('ui-')
+        })
       ],
       build: {
         rollupOptions: {

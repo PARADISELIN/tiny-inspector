@@ -7,7 +7,7 @@ import packageJSON from '../package.json'
  */
 export const methods: { [key: string]: (...any: any) => any } = {
   openPanel() {
-    Editor.Panel.open(packageJSON.name)
+    Editor.Panel.open(packageJSON.name + '.counter')
   }
 }
 
